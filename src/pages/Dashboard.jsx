@@ -27,6 +27,7 @@ import {
   useContractWrite,
   useNFTs
 } from "@thirdweb-dev/react";
+import Hero from "../components/Hero";
 
 export default function Dashboard() {
   const contractAddress = "0xb939B2da835c48761Ce36Ef5beA6CAC2cC72F669";
@@ -34,8 +35,12 @@ export default function Dashboard() {
   const [param2, setParam2] = useState(5000);
   const address = useAddress();
 
+
   return (
-    <SimpleGrid spacing={10} minChildWidth={300}>
+    <div>
+      <Hero />
+      <SimpleGrid spacing={4} minChildWidth={300}>
+     
      <GridItem>
       Hei your address: {address}
      </GridItem>
@@ -43,6 +48,8 @@ export default function Dashboard() {
       Hei your address: {address}
      </GridItem>
     </SimpleGrid>
+    </div>
+    
   )
 }
 

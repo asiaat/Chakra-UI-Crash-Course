@@ -1,14 +1,12 @@
 import { 
     ThirdwebNftMedia,
-    Web3Button,
     useAddress,
     useContract,
-    useContractMetadata,
-    useContractWrite,
     useNFTs
   } from "@thirdweb-dev/react";
 
 import { use, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function NFTCollections() {
     const contractAddress = "0xb939B2da835c48761Ce36Ef5beA6CAC2cC72F669";
@@ -17,6 +15,8 @@ export default function NFTCollections() {
     
     const address = useAddress();
     const {data: collection} = useNFTs(contract);
+    const OPENSEA_URL = "https://testnets.opensea.io/assets/goerli/"
+    const COLLECTION_URL = OPENSEA_URL + contractAddress;
 
     return (
       <div>NFT Collections
@@ -31,12 +31,12 @@ export default function NFTCollections() {
             />
               Square ID: {nft.metadata.id.toString()}
               <div>
-          <Web3Button
-          contractAddress={contractAddress}
-          action={(contract) => contract?.erc721.claim(1)}
+          <NavLink
+          to={COLLECTION_URL+"/"+nft.metadata.id.toString()}
+          target="_blank"
           >
-            Mint Black Squere
-          </Web3Button>
+            Buy via OpenSea
+          </NavLink>
         </div>
               </div>
           ) )}
