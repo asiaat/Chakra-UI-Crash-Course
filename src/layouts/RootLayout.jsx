@@ -3,12 +3,12 @@ import { Outlet } from "react-router-dom"
 
 // components
 import Navbar from "../components/Navbar"
-import Sidebar from "../components/Sidebar"
+import Footer from "../components/Footer"
 
 export default function RootLayout() {
   return (
     <Grid templateColumns="repeat(6, 1fr)" bg="gray.50">
-      {/* sidebar */}
+      {/* sidebar 
       <GridItem
         as="aside"
         colSpan={{ base: 6, lg: 2, xl: 1 }} 
@@ -17,17 +17,21 @@ export default function RootLayout() {
         p={{ base: '20px', lg: '30px' }}
       >
         <Sidebar />
+        
       </GridItem>
+      */}
 
       {/* main content & navbar */}
       <GridItem
         as="main"
-        colSpan={{ base: 6, lg: 4, xl: 5 }} 
+        colSpan={{ base: 6, lg: 4, xl: 6 }} 
         p="40px"
       >
         <Navbar />
         <Outlet />
+        <Footer />
       </GridItem>
+      
     </Grid>
   )
 }

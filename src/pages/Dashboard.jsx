@@ -11,45 +11,37 @@ import {
   CardFooter,
   HStack,
   Divider,
-  Button
+  Button,
+  GridItem
 } from "@chakra-ui/react"
 import { useLoaderData } from "react-router-dom"
+import { use, useState } from "react";
+import { 
+  ConnectWallet,
+  ThirdwebNftMedia,
+  Web3Button,
+  useAddress,
+  useContract,
+  useContractMetadata,
+  useOwnedNFTs,
+  useContractWrite,
+  useNFTs
+} from "@thirdweb-dev/react";
 
 export default function Dashboard() {
-  const tasks = useLoaderData()
+  const contractAddress = "0xb939B2da835c48761Ce36Ef5beA6CAC2cC72F669";
+  const { contract } = useContract(contractAddress);
+  const [param2, setParam2] = useState(5000);
+  const address = useAddress();
 
   return (
     <SimpleGrid spacing={10} minChildWidth={300}>
-      {tasks && tasks.map(task => (
-        <Card key={task.id} borderTop="8px" borderColor="purple.400" bg="white">
-
-          <CardHeader color="gray.700">
-            <Flex gap={5}>
-              <Box w="50px" h="50px">
-                <Text>AV</Text>
-              </Box>
-              <Box>
-                <Heading as="h3" size="sm">{task.title}</Heading>
-                <Text>by {task.author}</Text>
-              </Box>
-            </Flex>
-          </CardHeader>
-
-          <CardBody color="gray.500">
-            <Text>{task.description}</Text>
-          </CardBody>
-
-          <Divider borderColor="gray.200" />
-
-          <CardFooter>
-            <HStack>
-              <Button variant="ghost" leftIcon={<ViewIcon />}>Watch</Button>
-              <Button variant="ghost" leftIcon={<EditIcon />}>Comment</Button>
-            </HStack>
-          </CardFooter>
-
-        </Card>
-      ))}
+     <GridItem>
+      Hei your address: {address}
+     </GridItem>
+     <GridItem>
+      Hei your address: {address}
+     </GridItem>
     </SimpleGrid>
   )
 }
