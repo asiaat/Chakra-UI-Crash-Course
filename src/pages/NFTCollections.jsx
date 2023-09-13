@@ -7,6 +7,8 @@ import {
 
 import { use, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Grid, GridItem, Button } from '@chakra-ui/react'
+
 
 export default function NFTCollections() {
     const contractAddress = "0xb939B2da835c48761Ce36Ef5beA6CAC2cC72F669";
@@ -21,27 +23,42 @@ export default function NFTCollections() {
     return (
       <div>NFT Collections
 
-<div>
+    <div>
+
     <h2>Metadata : {collection?.metadata}</h2>
+        <Grid templateColumns='repeat(4, 1fr)' gap={2}>
           {collection?.map((nft) => (
  
+ 
             <div key={nft.metadata.id.toString()}>
+            <GridItem w='100%' h='100%' bg='gray.100' p='5'>    
               <ThirdwebNftMedia 
               metadata={nft.metadata}
             />
               Square ID: {nft.metadata.id.toString()}
               <div>
-          <NavLink
-          to={COLLECTION_URL+"/"+nft.metadata.id.toString()}
-          target="_blank"
-          >
-            Buy via OpenSea
-          </NavLink>
+                <Button
+                color="gray.600"
+                background="gray.300"
+                >
+                <NavLink
+                    
+                    to={COLLECTION_URL+"/"+nft.metadata.id.toString()}
+                    target="_blank"
+                    >
+                        Buy @OpenSea
+                    </NavLink>
+                </Button>
+          
         </div>
+        </GridItem>
               </div>
+              
           ) )}
+         </Grid>
         </div>
-
       </div>
+     
     )
+   
   }
