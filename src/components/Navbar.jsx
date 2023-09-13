@@ -12,13 +12,13 @@ export default function Navbar() {
         
         <NavLink to="/">
          
-          Black Square
+          dynamic n. f. t.   .. 
         </NavLink>
         </Heading>
       <Spacer />
 
       <HStack spacing="20px"> 
-        <Box bg="gray.200" p="10px 15px" borderRadius="50%">M</Box>
+        
         <NavLink to="collected">
          
           My NFTs

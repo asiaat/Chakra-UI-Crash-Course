@@ -10,16 +10,18 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
+  HStack
 } from '@chakra-ui/react'
+import BlinkingBox from './BlinkingBox'
 
 export default function Hero() {
   return (
     <>
-      <Container maxW={'3xl'}>
+      <Container maxW={'4xl'}>
         <Stack
           as={Box}
           textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
+          spacing={{ base: 10, md: 16 }}
           py={{ base: 20, md: 36 }}>
           <Heading
             fontWeight={600}
@@ -40,11 +42,29 @@ export default function Hero() {
             </Text>
             </Box>
           </Heading>
-          <Text color={'gray.500'}>
-            Monetize your content by charging your most loyal readers and reward them
-            loyalty points. Give back to your loyal readers by granting them access to
-            your pre-releases and sneak-peaks.
-          </Text>
+          <HStack spacing="5px"> 
+
+            <Box  p='6'  >
+                <BlinkingBox></BlinkingBox>
+            </Box>
+            <Box p='4' bg="gray.100"  borderRadius="8%">
+                <Text align="left">
+                
+
+<strong>Chromatic Evolution</strong> is a modern tribute to Kazimir Malevich's iconic <strong>Black Square</strong>, blending tradition with innovation. 🚀 <br></br>
+
+In 1915, Malevich's <strong>Black Square</strong> a simple black square on a white canvas, revolutionized the art world. 🎤💥<br></br>
+
+Today, we've taken that black square and given it a digital age makeover. Our collection features squares dancing through a spectrum of colors, reflecting the vibe of the modern world. 🌈💃
+
+These squares aren't static. They're are DynamicNFTs,You can chenge them after you gain the ownership. 💎🔄<br></br>
+
+Join "Chromatic Evolution" and be part of the art-tech fusion, whether you're into crypto or just love innovative art. 🔥🚀            </Text>
+            </Box>
+        
+        
+        </HStack>
+          
           <Stack
             direction={'column'}
             spacing={3}
