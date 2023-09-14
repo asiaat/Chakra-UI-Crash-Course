@@ -51,15 +51,15 @@ export default function Hero() {
                 <Text align="left">
                 
 
-<strong>Chromatic Evolution</strong> is a modern tribute to Kazimir Malevich's iconic <strong>Black Square</strong>, blending tradition with innovation. 🚀 <br></br>
+NFT Collection <strong>Chromatic Evolution</strong> is a modern tribute to Kazimir Malevich's iconic <strong>Black Square</strong>, blending tradition with innovation. 🚀 <br></br>
 
 In 1915, Malevich's <strong>Black Square</strong> a simple black square on a white canvas, revolutionized the art world. 🎤💥<br></br>
 
 Today, we've taken that black square and given it a digital age makeover. Our collection features squares dancing through a spectrum of colors, reflecting the vibe of the modern world. 🌈💃
 
-These squares aren't static. They're are DynamicNFTs,You can chenge them after you gain the ownership. 💎🔄<br></br>
+These squares aren't static. They're are DynamicNFTs,You can chenge them after you gain the ownership. 🔄<br></br>
 
-Join "Chromatic Evolution" and be part of the art-tech fusion, whether you're into crypto or just love innovative art. 🔥🚀            </Text>
+Join <strong>Chromatic Evolution</strong> and be part of the art-tech fusion, whether you're into crypto or just love innovative art. 🔥🚀            </Text>
             </Box>
         
         
